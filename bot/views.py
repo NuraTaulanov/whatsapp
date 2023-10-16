@@ -37,7 +37,7 @@ def bot(request):
         if user_response in ["1", "2", "3", "4"]:
             platform_options = ["Вэб-приложение", "Мобильное приложение", "Десктопное приложение", "Кроссплатформенное приложение"]
             user_states[sender_number]["platform"] = platform_options[int(user_response) - 1]
-            response.message("You've selected {}.".format(user_states[sender_number]["platform"]))
+            response.message("Вы выбрали {}.".format(user_states[sender_number]["platform"]))
             response.message("Пожалуйста, предоставьте краткое описание проекта:")
             user_states[sender_number]["state"] = "get_summary"
         else:
