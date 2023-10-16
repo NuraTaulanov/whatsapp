@@ -44,7 +44,7 @@ def bot(request):
             response.message("Пожалуйста, выберите подходящую платформу (1-4).")
     elif state == "get_summary":
         user_states[sender_number]["project_summary"] = user_response
-        response.message("Спасибо! Теперь, пожалуйста, укажите ваш бюджет:")
+        response.message("Спасибо! Теперь, пожалуйста, укажите ваш бюджет (в тенге):")
         user_states[sender_number]["state"] = "get_budget"
     elif state == "get_budget":
         user_states[sender_number]["budget"] = user_response
